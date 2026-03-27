@@ -21,11 +21,12 @@
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
       <version>10.1.0</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.8.0</version>
+      <version>7.12.0</version>
     </dependency>
   </dependencies>
 
