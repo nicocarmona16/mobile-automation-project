@@ -4,8 +4,15 @@ import org.globant.screens.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * Test class for validating the bottom navigation bar functionality
+ */
 public class NavigationTest extends BaseTest {
 
+    /**
+     * Scenario 1: Bottom Navigation Bar
+     * Navigates to each section using the bottom navigation bar icons and asserts that all expected elements in each section are visible
+     */
     @Test(testName = "Navigation through all bottom menu tabs")
     public void testBottomNavigation() {
 

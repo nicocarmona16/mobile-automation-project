@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/**
+ * Page Object representing the Webview screen of the application
+ */
 public class WebScreen extends BaseScreen {
 
     public WebScreen(AppiumDriver driver) {
@@ -20,6 +23,11 @@ public class WebScreen extends BaseScreen {
     @AndroidFindBy(accessibility = "Search (Ctrl+K)")
     private WebElement assertionWeb;
 
+    /**
+     * Verifies if the Web screen is successfully loaded
+     * It waits for either the loading text or the search button to become visible
+     * @return true if the screen is loaded, otherwise throws a TimeoutException.
+     */
     public boolean isWebScreenLoaded() {
         wait.until(ExpectedConditions.or(
                 ExpectedConditions.visibilityOf(loadingText),
