@@ -16,7 +16,7 @@ This repository contains an automated test suite for an Android mobile applicati
 The project is structured using the **Fluent Page Object Model**.
 Methods inside the Page Objects return instances of other Page Objects, allowing method chaining in the test classes.
 
-## 🧪 Scenarios Automated
+## Scenarios Automated
 1. **Bottom Navigation Bar Validation:** Verifies that clicking on each tab of the bottom navigation menu successfully routes the user to the corresponding screen.
 2. **Successful Sign Up:** Uses `Datafaker` to generate dynamic and unique user credentials for every test run.
 3. **Successful Login:** Reuses the Sign-Up flow to dynamically create a user and then successfully logs back in using the newly created credentials to ensure complete independence of the test.
