@@ -17,6 +17,9 @@ public class LoginScreen extends BaseScreen {
     @AndroidFindBy(accessibility = "button-LOGIN")
     private WebElement assertionLogin;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Sign up\")")
+    private WebElement tabSignUp;
+
     /**
      * Verifies if the Login button is visible on the screen
      * @return true if the login button is displayed, otherwise throws a TimeoutException
@@ -24,5 +27,15 @@ public class LoginScreen extends BaseScreen {
     public boolean isLoginButtonVisible() {
         wait.until(ExpectedConditions.visibilityOf(assertionLogin));
         return assertionLogin.isDisplayed();
+    }
+
+    /**
+     * Click on the Sign-Up tab to switch to the registration form
+     * @return A new instance of {@link SignUpScreen}.
+     */
+    public SignUpScreen clickSignUpTab() {
+        wait.until(ExpectedConditions.visibilityOf(tabSignUp));
+        tabSignUp.click();
+        return new SignUpScreen(driver);
     }
 }
